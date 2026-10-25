@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+# Python
+__pycache__/
+*.pyc
+# LaTeX build files
+*.aux
+*.log
+*.nav
+*.snm
+*.toc
+*.out
+*.synctex.gz

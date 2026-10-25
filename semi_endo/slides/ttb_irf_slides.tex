@@ -1,0 +1,72 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% figures live at the repo root
+\graphicspath{{figs/}{../../}}
+
+% ---------------------------------------------------------------- look
+\definecolor{ink}{HTML}{1A1A19}
+\definecolor{soft}{HTML}{52514E}
+\definecolor{mblue}{HTML}{2A78D6}
+\definecolor{morange}{HTML}{EB6834}
+\definecolor{mgreen}{HTML}{199E70}
+\definecolor{tint}{HTML}{F4F4F1}
+
+\usetheme{default}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=ink,bg=white}
+\setbeamercolor{structure}{fg=mblue}
+\setbeamercolor{frametitle}{fg=ink}
+\setbeamercolor{title}{fg=ink}
+\setbeamercolor{subtitle}{fg=soft}
+\setbeamercolor{author}{fg=soft}
+\setbeamercolor{date}{fg=soft}
+\setbeamercolor{footline}{fg=soft}
+\setbeamercolor{block title}{fg=white,bg=mblue}
+\setbeamercolor{block body}{fg=ink,bg=tint}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamerfont{title}{series=\bfseries,size=\LARGE}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{frametitle}{\vspace{0.6em}\insertframetitle\par\vspace{-0.35em}{\color{mblue}\rule{2.2cm}{1.2pt}}}
+\setbeamertemplate{footline}{\hfill\usebeamercolor[fg]{footline}\scriptsize\insertframenumber\hspace{1.2em}\vspace{0.8em}}
+\setlength{\leftmargini}{1.2em}
+
+\newcommand{\hl}[1]{{\color{mblue}\textbf{#1}}}
+\newcommand{\ho}[1]{{\color{morange}\textbf{#1}}}
+\newcommand{\src}[1]{}
+\newcommand{\fullfig}[2][0.98]{\begin{center}\includegraphics[width=#1\textwidth,height=0.64\textheight,keepaspectratio]{#2}\end{center}\vspace{-0.6em}}
+
+\title{Impulse responses\\[0.2em]with and without time to build}
+\date{October 2026}
+
+\newcommand{\figslide}[1]{\begin{center}\includegraphics[width=\textwidth,height=0.82\textheight,keepaspectratio]{#1}\end{center}}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \vfill
+  \titlepage
+\end{frame}
+
+% --------------------------------------------------------------------
+\begin{frame}{Expected shocks, policy from $t=0$}
+  \figslide{irf_expected0.png}
+\end{frame}
+
+% --------------------------------------------------------------------
+\begin{frame}{Expected shocks, policy from the news}
+  \figslide{irf_expected_pre.png}
+\end{frame}
+
+% --------------------------------------------------------------------
+\begin{frame}{Unexpected shocks}
+  \figslide{irf_unexpected.png}
+\end{frame}
+
+\end{document}
